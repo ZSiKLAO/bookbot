@@ -1,2 +1,12 @@
 /books
 books
+pycache/
+*.pyc
+.DS_Store
+.env
+.venv/
+venv/
+.pytest_cache/
+.coverage
+dist/
+build/
