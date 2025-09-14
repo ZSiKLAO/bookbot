@@ -19,3 +19,16 @@ def get_char_counts(text):
             char_counts[char] = 1
 
     return char_counts
+
+def sort_char_counts(char_dict):
+    # Step 1: Convert the input dictionary to a list of dictionaries
+    char_list = [{"char": char, "num": count} for char, count in char_dict.items()]
+
+    # Step 2: Define a helper function to extract the "num" value
+    def get_num(entry):
+        return entry["num"]
+
+    # Step 3: Sort the list in-place using the helper, in descending order
+    char_list.sort(key=get_num, reverse=True)
+
+    return char_list
