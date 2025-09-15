@@ -3,7 +3,7 @@ from stats import get_book_text, get_num_words, get_char_counts, sort_char_count
 def main():
     book_text = get_book_text("books/frankenstein.txt")
     num_words = get_num_words(book_text)
-    print(f"{num_words} words found in the document\n")
+    print(f"Found {num_words} total words\n")
 
     char_counts = get_char_counts(book_text)
     sorted_chars = sort_char_counts(char_counts)
@@ -12,7 +12,7 @@ def main():
         char = entry["char"]
         count = entry["num"]
         if char.isalpha():
-            print(f"The '{char}' character was found {count} times")
+            print(f"{char}: {count}")
 
 if __name__ == "__main__":
     main()
